@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타임게팅 - 정확한 서버시간 | 티켓팅 수강신청 서버시간 확인</title>
+  <meta name="description" content="타임게팅에서 정확한 서버시간을 확인하세요. 티켓팅, 수강신청, 멜론, 인터파크, 티켓링크 서버시간 실시간 제공. 밀리초 단위 정밀 시간.">
+  <meta name="keywords" content="서버시간, 티켓팅 서버시간, 수강신청 서버시간, 네이비즘, 정확한시간, 타임게팅, 멜론티켓팅, 인터파크서버시간, 티켓링크서버시간, 표준시간">
+  <meta property="og:title" content="타임게팅 - 정확한 서버시간">
+  <meta property="og:description" content="티켓팅, 수강신청 서버시간 밀리초 단위로 확인">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">타임게팅<span class="dot">.</span></div>
+    <nav>
+      <a href="/" class="active">서버시간</a>
+      <a href="#hosts">사이트별</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="time-hero">
+      <div class="hero-site-label">
+        <img id="hero-favicon" src="https://www.google.com/s2/favicons?domain=naver.com&sz=32" alt="">
+        <span id="hero-site-name">네이버</span>
+        <span class="hero-site-sub">서버시간</span>
+        <span id="hero-ping" class="hero-ping"></span>
+      </div>
+      <div class="clock-wrap">
+        <div id="clock" class="clock">00:00:00</div>
+        <div id="ms" class="ms">000</div>
+      </div>
+      <div id="date-str" class="date-str"></div>
+      <div class="alarm-wrap">
+        <button id="btn-alarm" class="btn-alarm">🔔 정각 알람 켜기</button>
+        <label class="opt"><input type="checkbox" id="chk-ms"> 밀리초 숨기기</label>
+      </div>
+    </section>
+
+    <section class="host-section" id="hosts">
+      <div class="search-bar-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="custom-input" placeholder="서버시간 확인할 사이트 주소 입력 (예: melon.com)" />
+          <button id="custom-btn">확인</button>
+        </div>
+      </div>
+
+      <h2>사이트 서버시간 확인</h2>
+      <p class="host-desc">사이트를 클릭하면 위 시계가 해당 서버시간으로 전환됩니다</p>
+
+      <div class="category">
+        <div class="cat-title">🎫 티켓팅</div>
+        <div class="host-grid" id="grid-ticket"></div>
+      </div>
+      <div class="category">
+        <div class="cat-title">📚 수강신청</div>
+        <div class="host-grid" id="grid-univ"></div>
+      </div>
+      <div class="category">
+        <div class="cat-title">🌐 기타</div>
+        <div class="host-grid" id="grid-etc"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>타임게팅 · 정확한 서버시간 제공 · <a href="privacy.html">개인정보처리방침</a></p>
+  </footer>
+
+  <!-- 정각 알람용 오디오 (Web Audio API로 생성) -->
+  <script src="script.js"></script>
+</body>
+</html>
